@@ -146,3 +146,26 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+    const hamburger = document.getElementById('hamburger');
+    const navbar = document.querySelector('.navbar');
+
+    hamburger.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+        hamburger.classList.toggle('open');
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        const skillBoxes = document.querySelectorAll('.skill-box');
+    
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+    
+        skillBoxes.forEach(box => observer.observe(box));
+    });
+    

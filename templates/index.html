@@ -17,58 +17,66 @@
     <script defer src="/static/scripts.js"></script>
 </head>
 <body>
-    <!-- Navigation Bar section -->
-    <header class="header">
-        <div class="logo">
-            <a href="#">
-                <img src="/static/pics/logo2.png" alt="Logo" class="logo-img logo-default">
-                <img src="/static/pics/logo.png" alt="Logo Hover" class="logo-img logo-hover">
-            </a>
-        </div>
+<!-- Navigation Bar section -->
+<header class="header">
+<div class="logo" id="logo">
+    <a href="#">
+        <img src="/static/pics/logo2.png" alt="Logo" class="logo-img logo-default">
+        <img src="/static/pics/logo.png" alt="Logo Hover" class="logo-img logo-hover">
+    </a>
+</div>
 
-        <nav class="navbar">
-            <ul>
-                <li>
-                    <a href="#home-section">
-                        <span class="text">Home</span>
-                        <img src="/static/pics/home.png" alt="Home Icon" class="icon">
-                    </a>
-                </li>
-                <li>
-                    <a href="#about-section">
-                        <span class="text">About</span>
-                        <img src="/static/pics/about.png" alt="About Icon" class="icon">
-                    </a>
-                </li>
-                <li>
-                    <a href="#skills-section">
-                        <span class="text">Skills</span>
-                        <img src="/static/pics/skills.png" alt="Skills Icon" class="icon">
-                    </a>
-                </li>
-                <li>
-                    <a href="#projects-section">
-                        <span class="text">Projects</span>
-                        <img src="/static/pics/project.png" alt="Projects Icon" class="icon">
-                    </a>
-                </li>
-                <li>
-                    <a href="#contact-section">
-                        <span class="text">Contact</span>
-                        <img src="/static/pics/contact.png" alt="Contact Icon" class="icon">
-                    </a>
-                </li>
-                <li>
-                    <a href="#resume">
-                        <span class="text">Resume</span>
-                        <img src="/static/pics/resume.png" alt="Resume Icon" class="icon">
-                    </a>
-                </li>
-            </ul>
+    <!-- Hamburger Icon (placed outside nav for better control) -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a href="#home-section">
+                    <span class="text">Home</span>
+                    <img src="/static/pics/home.png" alt="Home Icon" class="icon">
+                </a>
+            </li>
+            <li>
+                <a href="#about-section">
+                    <span class="text">About</span>
+                    <img src="/static/pics/about.png" alt="About Icon" class="icon">
+                </a>
+            </li>
+            <li>
+                <a href="#skills-section">
+                    <span class="text">Skills</span>
+                    <img src="/static/pics/skills.png" alt="Skills Icon" class="icon">
+                </a>
+            </li>
+            <li>
+                <a href="#projects-section">
+                    <span class="text">Projects</span>
+                    <img src="/static/pics/project.png" alt="Projects Icon" class="icon">
+                </a>
+            </li>
+            <li>
+                <a href="#contact-section">
+                    <span class="text">Contact</span>
+                    <img src="/static/pics/contact.png" alt="Contact Icon" class="icon">
+                </a>
+            </li>
+            <li>
+                <a href="#resume">
+                    <span class="text">Resume</span>
+                    <img src="/static/pics/resume.png" alt="Resume Icon" class="icon">
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
             
-        </nav>
         
-    </header>
     <!-- Navigation Bar section ends -->
 
 <!-- Home section start -->
@@ -194,14 +202,6 @@
                 <h3>javascript</h3>
             </div>
             
-            <div class="skill-box">
-                <img src="/static/pics/react.png" alt="JavaScript Icon" class="skill-icon">
-                <h3>React</h3>
-            </div>
-            <div class="skill-box">
-                <img src="/static/pics/j.png" alt="Jquery Icon" class="skill-icon">
-                <h3>Jquery</h3>
-            </div>
         </div>
     </div>
 
@@ -219,18 +219,6 @@
                 <h3>Python</h3>
             </div>
 
-            <div class="skill-box">
-                <img src="/static/pics/java.png" alt="Java Icon" class="skill-icon">
-                <h3>Java</h3>
-            </div>
-            <div class="skill-box">
-                <img src="/static/pics/c.png" alt="c Icon" class="skill-icon">
-                <h3>C</h3>
-            </div>
-            <div class="skill-box">
-                <img src="/static/pics/node.png" alt="node Icon" class="skill-icon">
-                <h3>node.js</h3>
-            </div>
         </div>
     </div>
 
@@ -266,11 +254,39 @@
 
 
         <!-- project section -->
+        <section id="projects-section" class="projects-section">
+            <div class="section-title">
+                <h2 class="heading1">My <span class="heading">Projects</span></h2>
+            </div>
+        
+            <div class="projects-container">
+                <div class="project-box">
+                    <div class="project-carousel swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="/static/pics/studentplates.png" alt="Project Image 1"></div>
+                            <div class="swiper-slide"><img src="/static/pics/studentplates1.png" alt="Project Image 2"></div>
+                            <div class="swiper-slide"><img src="/static/pics/studentplates2.png" alt="Project Image 3"></div>
+                        </div>
+                        <!-- Pagination (Dots) & Navigation (Arrows) -->
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        
+                    <div class="project-text">
+                        <h3> 🍔 Student Plates</h3>
+                        <p>StudentPlates is a student-focused food recipe website designed to help university students cook healthy, affordable meals with ease. It offers a growing collection of simple recipes, categorized by diet types like vegan, vegetarian, halal, and keto. The platform is designed with a modern, responsive layout using HTML, CSS, and JavaScript, and includes interactive features, animations, and engaging visuals to make cooking more accessible and enjoyable for students.</p>
+                        <a href="https://studentplates.online/" class="project-button" target="_blank">View Project</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
 
 <section id="projects-section" class="projects-section">
-    <div class="section-title">
-        <h2 class="heading1">My <span class="heading">Projects</span></h2>
-    </div>
 
     <div class="projects-container">
         <div class="project-box">
@@ -286,14 +302,12 @@
                 <div class="swiper-button-next"></div>
             </div>
             
-            <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-<!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
             <div class="project-text">
-                <h3>Photographer portofolio</h3>
-                <p>This is my latest project, it is a portofolio for an Edinburgh based photographer to showcase his skills and allow customers to contact him directly. the website has some of his work plus the option to purchase some of his prints. This website is mainly made using HTML, CSS and JS.</p>
+                <h3>📸Photographer portofolio</h3>
+                <p>This is a portofolio for an Edinburgh based photographer to showcase his skills and allow customers to contact him directly. the website has some of his work plus the option to purchase some of his prints. This website is mainly made using HTML, CSS and JS.</p>
                 <a href="https://photography-website-ko83.onrender.com/" class="project-button" target="_blank">View Project</a>
                 
             </div>
